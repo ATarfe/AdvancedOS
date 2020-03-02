@@ -1,0 +1,14 @@
+****************************************
+
+            ASSIGNMENT 2
+          
+****************************************          
+
+Answers:
+
+I. The program does generate junk values. This is because of the race condition between the two processes, wherein each process tries to
+   increment the value of global variable 'n' simultaneously. One process increments the variable and loads it into the register, but at 
+   that moment, the OS switches to the other process and increments the variable, loads it into the register and stores the value. Now, 
+   it resumes the first process, but the value is now reset.The OS now overwrites this value that the second process incremented.
+   
+II. No, All the values that are being produced are not getting consumed.   

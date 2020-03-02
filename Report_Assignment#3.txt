@@ -1,0 +1,16 @@
+//--------------------------------------------------------//
+
+					Report Assignment #3
+
+//--------------------------------------------------------//
+
+1. What can you do about mixed input during debugging?
+->  The mixed input can be the parameters defined by the user and also, multiple threads producing or
+	consuming the input simultanoeusly. With the help of playing with the parameters such as increasing 
+	or decreasing the number of streams or the time window, we can identify any faults in the flow of 
+	the code.
+
+2. Where do you need mutexes?
+->	Mutexes are Mutual Exclusion Semaphores which are used to protect shared resources. In our case,
+	during continuous consumption, we can use the mutexes before each consumer stream produced, for the 
+	producer to properly synchronise the process.	

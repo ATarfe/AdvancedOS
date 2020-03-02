@@ -1,0 +1,33 @@
+-----------------------------------------------------------------------------
+
+			
+			Assignment 4.3
+
+
+-----------------------------------------------------------------------------
+
+
+
+List of files created:
+
+1. future.h - This header file includes:
+		* Future states - FUTURE_EMPTY, FUTURE_FREE, FUTURE_WAITING and 		 		  FUTURE_FULL.
+		* Future modes - FUTURE_EXCLUSIVE, FUTURE_SHARED and FUTURE_QUEUE.
+
+		a) FUTURE_EXCLUSIVE - This mode executes only two threads at a time.
+
+		b) FUTURE_SHARED - In this mode, there is a one-to-many relationship 		   between threads calling future_get() and future_set(). It is 		   implemented using queue.
+
+		c) FUTURE_QUEUE - In this mode, there is a many-to-many relationship 		  		   between threads calling future_get() and future_set(). It is 		   implemented using queues.
+		(Note: Did not implement FUTURE_QUEUE.)
+
+2. future_alloc.c - A system call to allocate a new future using getmem().
+
+3. future_get.c - System call to get value of a future set by an operation and may change 		  the state of future.
+
+4.future_set.c - A system call to set a value in a future and may change the state of    		 future.
+
+5.future_free.c - System call to free the allocated future using freemem().
+
+
+6.future_test.c - A script to test the implementation of futures and their system calls using functions such as future_prod and future_cons for producer and consumer process using future_set and future_get respectively. 
